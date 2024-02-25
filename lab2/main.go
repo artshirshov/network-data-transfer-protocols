@@ -23,7 +23,7 @@ var (
 var messagePubHandler mqtt.MessageHandler = func(client mqtt.Client, msg mqtt.Message) {
 	routeMask := strings.Split(msg.Topic(), "/")
 
-	if routeMask[1] == "STUDENT21" &&
+	if routeMask[1] == "Student21" &&
 		(routeMask[2] == "Value1" || routeMask[2] == "Value2") {
 		fmt.Printf("My topics ITMO/Student21/%s  \tReceived message: %s\n", routeMask[2], msg.Payload())
 		myMessages = append(myMessages, create(msg))
