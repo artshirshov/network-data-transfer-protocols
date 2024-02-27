@@ -22,7 +22,7 @@ func main() {
 	defer con.Close()
 
 	res := make([]byte, 0)
-	buf := make([]byte, math.MaxUint16+1)
+	buf := make([]byte, math.MaxUint16)
 
 	for {
 		n, err := con.Read(buf)
